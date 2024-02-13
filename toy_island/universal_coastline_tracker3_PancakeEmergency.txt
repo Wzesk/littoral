@@ -1,0 +1,34 @@
+Grasshopper has lost responsiveness for more than 1 minute.
+An emergency save has been made.
+Pancake cannot determine which component leads to the problem
+
+A stack trace report is attached for diagnosis: 
+
+   at System.Drawing.SafeNativeMethods.Gdip.GdipMeasureString(HandleRef graphics, String textString, Int32 length, HandleRef font, GPRECTF& layoutRect, HandleRef stringFormat, GPRECTF& boundingBox, Int32& codepointsFitted, Int32& linesFilled)
+   at System.Drawing.SafeNativeMethods.Gdip.GdipMeasureString(HandleRef graphics, String textString, Int32 length, HandleRef font, GPRECTF& layoutRect, HandleRef stringFormat, GPRECTF& boundingBox, Int32& codepointsFitted, Int32& linesFilled)
+   at System.Drawing.Graphics.MeasureString(String text, Font font, SizeF layoutArea, StringFormat stringFormat)
+   at System.Drawing.Graphics.MeasureString(String text, Font font, Int32 width)
+   at Grasshopper.Kernel.GH_FontServer.MeasureString(String text, Font font, Single maxwidth)
+   at Grasshopper.Kernel.Special.GH_PanelAttributes.PanelEntryItem.ComputeSize(Int32 layoutWidth)
+   at Grasshopper.GUI.StringDisplay.GH_StringList`1.BuildCache(Rectangle layoutBox)
+   at Grasshopper.Kernel.Special.GH_PanelAttributes.CreateStack()
+   at Grasshopper.Kernel.Special.GH_PanelAttributes.Render(GH_Canvas canvas, Graphics graphics, GH_CanvasChannel channel)
+   at Grasshopper.GUI.Canvas.GH_Painter.DrawMiddleGround(GH_Document doc, GH_CanvasChannel channel)
+   at Grasshopper.GUI.Canvas.GH_Canvas.Regen_DrawMiddleGround()
+   at Grasshopper.GUI.Canvas.GH_Canvas.OnPaint(PaintEventArgs e)
+   at System.Windows.Forms.Control.PaintWithErrorHandling(PaintEventArgs e, Int16 layer)
+   at System.Windows.Forms.Control.WmPaint(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.SafeNativeMethods.UpdateWindow(HandleRef hWnd)
+   at System.Windows.Forms.SafeNativeMethods.UpdateWindow(HandleRef hWnd)
+   at System.Windows.Forms.Control.Update()
+   at Grasshopper.Kernel.Attributes.GH_ResizableAttributes`1.RespondToMouseMove(GH_Canvas sender, GH_CanvasMouseEvent e)
+   at Grasshopper.Kernel.Special.GH_PanelAttributes.RespondToMouseMove(GH_Canvas sender, GH_CanvasMouseEvent e)
+   at Grasshopper.GUI.Canvas.GH_Canvas.MouseMove_ActiveObject(GH_CanvasMouseEvent e)
+   at Grasshopper.GUI.Canvas.GH_Canvas.Canvas_MouseMove(Object sender, MouseEventArgs e)
+   at System.Windows.Forms.MouseEventHandler.Invoke(Object sender, MouseEventArgs e)
+   at System.Windows.Forms.Control.OnMouseMove(MouseEventArgs e)
+   at System.Windows.Forms.Control.WmMouseMove(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
