@@ -1,0 +1,26 @@
+Grasshopper has lost responsiveness for more than 1 minute.
+An emergency save has been made.
+Problem might be caused by nodeLinearRegression in LunchBoxML, Version=2017.10.30.0, Culture=neutral, PublicKeyToken=null.
+
+A stack trace report is attached for diagnosis: 
+
+   at System.Threading.Thread.SleepInternal(Int32 millisecondsTimeout)
+   at Accord.Math.Random.Generator.set_Seed(Nullable`1 value)
+   at ProvingGround.MachineLearning.Classes.clsML.LinearRegression(Double test, List`1 inputList, List`1 outputList, Int32 seed)
+   at ProvingGround.MachineLearning.nodeLinearRegression.SolveInstance(IGH_DataAccess DA)
+   at Grasshopper.Kernel.GH_Component.Solution_Compute_MixedAccess(GH_StructureIterator it)
+   at Grasshopper.Kernel.GH_Component.ComputeData()
+   at Grasshopper.Kernel.GH_Document.SolveAllObjects(GH_SolutionMode mode)
+   at Grasshopper.Kernel.GH_Document.NewSolution(Boolean expireAllObjects, GH_SolutionMode mode)
+   at Grasshopper.Kernel.GH_Document.set_EnableSolutions(Boolean Value)
+   at System.Windows.Forms.ToolStripItem.RaiseEvent(Object key, EventArgs e)
+   at System.Windows.Forms.ToolStripMenuItem.OnClick(EventArgs e)
+   at System.Windows.Forms.ToolStripItem.HandleClick(EventArgs e)
+   at System.Windows.Forms.ToolStripItem.HandleMouseUp(MouseEventArgs e)
+   at System.Windows.Forms.ToolStrip.OnMouseUp(MouseEventArgs mea)
+   at System.Windows.Forms.ToolStripDropDown.OnMouseUp(MouseEventArgs mea)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ToolStrip.WndProc(Message& m)
+   at System.Windows.Forms.ToolStripDropDown.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
