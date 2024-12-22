@@ -1,26 +1,19 @@
 Grasshopper has lost responsiveness for more than 1 minute.
 An emergency save has been made.
-Problem might be caused by nodeLinearRegression in LunchBoxML, Version=2017.10.30.0, Culture=neutral, PublicKeyToken=null.
+Problem might be caused by Component_MergeVariable in MathComponents, Version=7.37.24107.15001, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803.
 
 A stack trace report is attached for diagnosis: 
 
-   at System.Threading.Thread.SleepInternal(Int32 millisecondsTimeout)
-   at Accord.Math.Random.Generator.set_Seed(Nullable`1 value)
-   at ProvingGround.MachineLearning.Classes.clsML.LinearRegression(Double test, List`1 inputList, List`1 outputList, Int32 seed)
-   at ProvingGround.MachineLearning.nodeLinearRegression.SolveInstance(IGH_DataAccess DA)
-   at Grasshopper.Kernel.GH_Component.Solution_Compute_MixedAccess(GH_StructureIterator it)
+   at Grasshopper.Kernel.GH_Component.GH_StructureIterator.GetDataTree[T](Int32 index, GH_Structure`1& tree)
+   at MathComponents.MergeComponents.Component_MergeVariable.SolveInstance(IGH_DataAccess DA)
+   at Grasshopper.Kernel.GH_Component.Solution_Compute_TreeOnlyAccess(GH_StructureIterator it)
    at Grasshopper.Kernel.GH_Component.ComputeData()
    at Grasshopper.Kernel.GH_Document.SolveAllObjects(GH_SolutionMode mode)
    at Grasshopper.Kernel.GH_Document.NewSolution(Boolean expireAllObjects, GH_SolutionMode mode)
-   at Grasshopper.Kernel.GH_Document.set_EnableSolutions(Boolean Value)
-   at System.Windows.Forms.ToolStripItem.RaiseEvent(Object key, EventArgs e)
-   at System.Windows.Forms.ToolStripMenuItem.OnClick(EventArgs e)
-   at System.Windows.Forms.ToolStripItem.HandleClick(EventArgs e)
-   at System.Windows.Forms.ToolStripItem.HandleMouseUp(MouseEventArgs e)
-   at System.Windows.Forms.ToolStrip.OnMouseUp(MouseEventArgs mea)
-   at System.Windows.Forms.ToolStripDropDown.OnMouseUp(MouseEventArgs mea)
-   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
-   at System.Windows.Forms.Control.WndProc(Message& m)
-   at System.Windows.Forms.ToolStrip.WndProc(Message& m)
-   at System.Windows.Forms.ToolStripDropDown.WndProc(Message& m)
-   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at Grasshopper.GUI.Canvas.GH_Canvas.set_Document(GH_Document Value)
+   at Grasshopper.Kernel.GH_DocumentServer.AddDocument(String filepath, Boolean makeActive)
+   at Grasshopper.GUI.GH_DocumentEditor.ScriptAccess_OpenDocument(String filename)
+   at Grasshopper.GUI.GH_DocumentEditor.ScriptAccess_OpenDocument()
+   at Grasshopper.Plugin.Commands.Run_GrasshopperScripted()
+   at GrasshopperPlugin.GrasshopperCommand.RunCommand(RhinoDoc doc, RunMode mode)
+   at Rhino.Commands.Command.OnRunCommand(Int32 commandSerialNumber, UInt32 docSerialNumber, Int32 mode)
